@@ -29,7 +29,7 @@ console.log(products)
  //2. write code to loop through the products
 for(let i=0; i < products.length; i++) {
   let product = products[i] //as the loop iterates it pulls each subsequent product from the array
-  console.log(product) //prodcut is going to be an object with these 4 attributes
+  //console.log(product) //prodcut is going to be an object with these 4 attributes
 // step by step we are digging into the data
 // if i was 0 - then it would always be the first product 
   //let product1 = products [0]
@@ -42,9 +42,30 @@ for(let i=0; i < products.length; i++) {
 // we need to select an html element in our html file - attach data to html
 // we need to do that by rendering html
 
+let element = document.querySelector('.products')
+//console.log(element)
 
+console.log(product)
 
+//will select div however many times there is
 
+element.insertAdjacentHTML('beforeend', `
+<div class="p-4 w-full md:w-1/2 lg:w-1/3">
+        <div class="border h-full p-4 flex flex-col">
+          <h2 class="text-lg font-bold mb-4">${product.name}</h2> 
+          <div class="mb-4"><img src="${product.image}">
+          </div>
+          <div class="mb-4 text-gray-900">
+            ${product.description}
+          </div>
+          <div class="mt-auto text-purple-500 text-2xl">$${product.price}</div>
+        </div>
+      </div>`)
+
+      // why curly brack and $ sign? product is the object and we use ${} is syntax specific to string concatination
+      // if you wrap anything that's not a string in `` it will force it into a string 
+//console log is the easiest way for us to test something that we've done if it's working
+// any time you're rendering data in a dynamic function from html use `
 
 
 
