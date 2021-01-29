@@ -3,17 +3,23 @@ let burger = ['bottom bun', 'beef patty', 'cheese', 'onion', 'tomato', 'lettuce'
 // Task: write each ingredient to the JavaScript console
 
 // without a loop
-console.log(burger[0])
-console.log(burger[1])
-console.log(burger[2])
-console.log(burger[3])
-console.log(burger[4])
-console.log(burger[5])
-console.log(burger[6])
-console.log(burger[7])
+// console.log(burger[0])
+// console.log(burger[1])
+// console.log(burger[2])
+// console.log(burger[3])
+// console.log(burger[4])
+// console.log(burger[5])
+// console.log(burger[6])
+// console.log(burger[7])
 
 // with a loop
 
+for (let i = 0; i < burger.length; i++) {
+  let ingredient = burger[i]
+  console.log(ingredient)
+  // output = ingredient
+
+} //i is for index, ; means that bit of code stops and do next bit of code, the loop adapts to the size of the data
 
 //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 
