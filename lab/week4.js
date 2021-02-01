@@ -68,7 +68,7 @@ console.log(product)
 //will select div however many times there is
 
 //4. then extract to the separate renderProduct
-element.insertAdjacentHTML
+element.insertAdjacentHTML('beforeend', renderProduct(product))
 
       // why curly brack and $ sign? product is the object and we use ${} is syntax specific to string concatination
       // if you wrap anything that's not a string in `` it will force it into a string 
@@ -94,3 +94,8 @@ element.insertAdjacentHTML
 }
 
 window.addEventListener('DOMContentLoaded', pageLoaded)
+
+
+// if more than one leg it's a pool
+// if it says purple then it's purple
+// if not purple and >3 riders it's XL otherwise X
